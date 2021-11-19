@@ -70,10 +70,16 @@ function updateVolume() {
 
 volume.addEventListener('input', updateVolume);
 
-function toggleClass(el){
-	if(el.className == "video"){
-		el.className = "oldSchool";
-	} else {
-		el.className = "video";
-	}
+function myFunction(){
+	document.getElementById("vintage").className = "oldSchool";
 }
+
+function myFunction(){
+	var x = document.getElementById("vintage");
+	// If "mystyle" exist, overwrite it with "mystyle2"
+	if (x.className === "orig") {
+	  x.className = "vintage";
+	} else {
+	  x.className = "orig";
+	}
+  }
