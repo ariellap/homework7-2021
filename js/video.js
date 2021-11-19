@@ -17,7 +17,25 @@ document.querySelector("#pause").addEventListener("click", function() {
 
 document.querySelector("#slower").addEventListener("click", function () {
 	console.log("Old video speed is " + video.playbackRate);
-	video.playbackRate = 0.5;
+	video.playbackRate = 0.95;
 	console.log("New video speed is " + video.playbackRate);
 
+});
+
+document.querySelector("#faster").addEventListener("click", function () {
+	console.log("Old video speed is " + video.playbackRate);
+	video.playbackRate = 1.05;
+	console.log("New video speed is " + video.playbackRate);
+
+});
+
+document.querySelector("#skip").addEventListener("click", function() {
+	console.log("Old video speed is " + video.playbackRate);
+	video.currentTime() + 10;
+	console.log("New video speed is " + video.playbackRate);
+});
+
+document.querySelector("#mute").addEventListener("click", function(){
+	console.log("Video is muted")
+	video.muted = true;
 });
