@@ -39,3 +39,41 @@ document.querySelector("#mute").addEventListener("click", function(){
 	console.log("Video is muted")
 	video.muted = true;
 });
+
+const mute = document.getElementById("mute");
+
+mute.addEventListener("click", ()=>{
+
+    if(mute.innerText === "Mute"){
+        mute.innerText = "Unmute";
+    }
+	else{
+        mute.innerText= "Mute";
+		video.muted = false;
+    }
+});
+
+
+function thisVolume(volume_value) { 
+	var video = document.querySelector("#slider"); 
+	document.getElementById("volume").innerHTML=volume_value; 
+	video.volume = volume_value / 100; 
+	}
+
+function updateVolume() {
+  if (video.muted) {
+    video.muted = false;
+  }
+
+  video.volume = volume.value;
+}
+
+volume.addEventListener('input', updateVolume);
+
+function toggleClass(el){
+	if(el.className == "video"){
+		el.className = "oldSchool";
+	} else {
+		el.className = "video";
+	}
+}
